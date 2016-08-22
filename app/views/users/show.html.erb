@@ -1,0 +1,6 @@
+<h1><%= @user.name %>'s Dashboard</h1>
+<%@user.records.each do |r| %>
+<%=r.created_at %>
+<%=r.outcome  %>
+<%=r.target %>
+<% end %>
