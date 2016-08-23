@@ -14,4 +14,13 @@ class RecordsController < ApplicationController
   def new
 
   end
+
+  def today
+    render :json => {
+      # :goal => @current_user.goal,
+      :change => @current_user.records.today_change_array,
+      :outcome => @current_user.records.today_outcome_array
+    }
+
+  end
 end
