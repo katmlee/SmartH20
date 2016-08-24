@@ -4,6 +4,11 @@ gem 'bootstrap-sass'
 
 gem 'underscore-rails', '~> 1.8', '>= 1.8.3'
 
+gem 'groupdate'
+
+gem "chartkick"
+
+gem "compass"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 # Use postgresql as the database for Active Record

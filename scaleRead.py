@@ -23,7 +23,7 @@ while True:
         last_change = time.time()
         # if reading is stable for at least a second
 
-    if time.time() - last_change > STABLE_TIME and line != last_sent_reading and last_reading != 0:
+    if time.time() - last_change > STABLE_TIME and line != last_sent_reading and last_reading > 0.005:
         print 'DIFF! (submit)'
         querystring = '?email=' + EMAIL + '&reading=' + str(line)
         urllib2.urlopen(HOST + querystring).read()

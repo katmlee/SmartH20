@@ -1,6 +1,58 @@
 <h1><%= @user.name %>'s Dashboard</h1>
-<%@user.records.each do |r| %>
-<%=r.created_at %>
-<%=r.outcome  %>
-<%=r.target %>
-<% end %>
+<ul>
+
+  <div class="waterBottle">
+    <div class="waves">
+        <div class="wave top-wave"></div>
+        <div class="wave middle-wave"></div>
+        <div class="wave bottom-wave"></div>
+    </div>
+  </div>
+
+<!-- <li class="water-bottle">
+    <div class="cap">
+        <div class="cap-top">
+        </div>
+        <div class="cap-seal">
+        </div>
+    </div>
+   <div class="bottle">
+        <div class="water-empty"> </div>
+    </div>
+</li>
+      <li class="water-bottle">
+    <div class="cap">
+        <div class="cap-top">
+        </div>
+        <div class="cap-seal">
+        </div>
+    </div>
+   <div class="bottle">
+        <div class="water-low"> </div>
+    </div>
+</li>
+<li class="water-bottle">
+    <div class="cap">
+        <div class="cap-top">
+        </div>
+        <div class="cap-seal">
+        </div>
+    </div>
+   <div class="bottle">
+        <div class="water-medium"> </div>
+    </div>
+</li>
+
+    <li class="water-bottle">
+    <div class="cap">
+        <div class="cap-top">
+        </div>
+        <div class="cap-seal">
+        </div>
+    </div>
+   <div class="bottle">
+        <div class="water-full"> </div>
+    </div>
+</li>
+</ul> -->
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
