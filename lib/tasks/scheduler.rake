@@ -31,5 +31,9 @@ task :notify => :environment do
              }.to_json,
     :headers => { 'Content-Type' => 'application/json' } )
 
+    puts '!' * 30
+    puts @result.inspect
+    puts '?' * 30
+
     puts "shouldve run"
 end
