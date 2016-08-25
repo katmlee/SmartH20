@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get '/submit_reading' => 'records#submit_reading', :as => 'submit_reading'
 
 
+  # post '/notification'=>'totals#notification'
   get '/todayData' => 'totals#today'
   get '/historicalData' => 'totals#historical'
 
