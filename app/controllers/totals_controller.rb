@@ -1,7 +1,6 @@
 class TotalsController < ApplicationController
   def today
     @todayTotal = @current_user.totals.getTotalToday
-    @notification = <%= @todayTotal  %>
     render :json => {
       # :goal => @current_user.goal,
       :total => @todayTotal
