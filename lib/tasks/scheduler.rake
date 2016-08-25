@@ -35,6 +35,8 @@ task :notify => :environment do
                :access_token => @auth['access_token']
              }.to_json,
     :headers => { 'Content-Type' => 'application/json' } )
+
+    puts "shouldve run"
 end
 
 desc "End of task"
