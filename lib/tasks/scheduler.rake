@@ -1,6 +1,16 @@
-namespace :notification do
-  desc 'Send current water consumption and pace notification'
-  task :notify => :environment do
+desc "This task is called by the Heroku scheduler add-on"
+task :update_feed => :environment do
+  puts "Updating feed..."
+  NewsFeed.update
+  puts "done."
+end
+
+task :send_reminders => :environment do
+  User.send_reminders
+end
+
+desc 'Send current water consumption and pace notification'
+task :notify => :environment do
     @urlstring = "https://api.sendpulse.com/oauth/access_token"
     @auth = HTTParty.post(@urlstring.to_str,
     :body => { :grant_type => 'client_credentials',
@@ -20,5 +30,4 @@ namespace :notification do
                :access_token => @auth['access_token']
              }.to_json,
     :headers => { 'Content-Type' => 'application/json' } )
-  end
 end
