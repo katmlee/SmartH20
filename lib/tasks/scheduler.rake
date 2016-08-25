@@ -1,3 +1,8 @@
+desc "Start task"
+task :start => :environment do
+  puts "Starting task"
+end
+
 desc "This task is called by the Heroku scheduler add-on"
 task :update_feed => :environment do
   puts "Updating feed..."
@@ -30,4 +35,9 @@ task :notify => :environment do
                :access_token => @auth['access_token']
              }.to_json,
     :headers => { 'Content-Type' => 'application/json' } )
+end
+
+desc "End of task"
+task :end => :environment do
+  puts "End task"
 end
