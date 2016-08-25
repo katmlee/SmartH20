@@ -4,59 +4,71 @@
 @import "compass/css3/animation";
 @import "compass/css3/transform";
 
-$waveWidth:998px;
-
-@include keyframes(waves){
-  0%{
-    left:0;
-  }
-  100%{
-    left:$waveWidth * -1;
-  }
-}
-
-
-body{
-  background:#e6e6e5;
-  overflow:hidden;
-}
-
-
-.waves{
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: $waveWidth * 5;
-  z-index:0;
-  opacity:0.75;
-  .wave{
-    position:absolute;
-    width:100%;
-    height:300px;
-    background-image:url('../img/wave.png');
-    background-repeat:repeat-x;
-    &.bottom-wave{
-      @include animation(waves 17s infinite linear);
-      bottom:-90px;
-    }
-    &.middle-wave{
-      @include animation(waves 22s infinite linear);
-      bottom:100px;
-      margin-left:$waveWidth * -0.3;
-    }
-    &.top-wave{
-      @include animation(waves 27s infinite linear);
-      bottom:300px;
-      margin-left:$waveWidth * -0.6;
-    }
-  }
-}
 .waterBottle{
   background: gray;
   width: 400px;
   height: 700px;
   border-radius:28px 28px 10px 10px;
+  position: relative;
 }
+
+.water{
+  background: blue;
+  height: 650px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+}
+// $waveWidth:998px;
+//
+// @include keyframes(waves){
+//   0%{
+//     left:0;
+//   }
+//   100%{
+//     left:$waveWidth * -1;
+//   }
+// }
+//
+//
+// body{
+//   background:#e6e6e5;
+//   overflow:hidden;
+// }
+//
+//
+// .waves{
+//   position: fixed;
+//   bottom: 0;
+//   left: 0;
+//   width: $waveWidth * 5;
+//   z-index:0;
+//   opacity:0.75;
+//   .wave{
+//     position:absolute;
+//     width:100%;
+//     height:300px;
+//     background-image:url('https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2012/02/Screen-shot-2012-02-12-at-11.56.54-PM.png');
+//     background-repeat:repeat-x;
+//     &.bottom-wave{
+//       @include animation(waves 17s infinite linear);
+//       bottom:-90px;
+//     }
+//     &.middle-wave{
+//       @include animation(waves 22s infinite linear);
+//       bottom:100px;
+//       margin-left:$waveWidth * -0.3;
+//     }
+//     &.top-wave{
+//       @include animation(waves 27s infinite linear);
+//       bottom:300px;
+//       margin-left:$waveWidth * -0.6;
+//     }
+//   }
+// }
+
 // body { margin:10% 10%; }
 // li.water-bottle { float:left;margin-right:15px;}
 // ul { list-style-type:inline;

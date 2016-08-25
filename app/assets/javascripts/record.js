@@ -6,6 +6,7 @@ $(document).ready(function() {
     var totalconsumed = 0;
     var target = 2000;
     var total_consumed_today;
+    var water_height = 650;
 
     var getTodayData = function(){
 
@@ -16,8 +17,10 @@ $(document).ready(function() {
       }).done(function(result) {
         console.log(result.total[0].total_consumed*1000);
         total_consumed_today = result.total[0].total_consumed*1000;
-        waterBottleClassPercentage = total_consumed_today/target;
-        console.log(waterBottleClassPercentage);
+        waterBottleClassPercentage = 1.0 - (total_consumed_today/target);
+        // waterBottleClassPercentage= 0.8;
+        water_height= water_height * waterBottleClassPercentage;
+        $('.water').css('height', water_height+'px');
       //   console.log(result.outcome);
       //   timestamps = result.change;
       //   outcomeArray = result.outcome;
