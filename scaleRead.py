@@ -3,7 +3,7 @@ import urllib2
 import time
 
 EMAIL = 'katrinamarielee@gmail.com'
-HOST = 'http://localhost:3000/submit_reading'
+HOST = 'https://quench2o.herokuapp.com/submit_reading'
 
 STABLE_TIME = 1.0
 

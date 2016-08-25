@@ -23,9 +23,9 @@ task :notify => :environment do
     @urlstring_to_post = "https://api.sendpulse.com/push/tasks"
 
     @result = HTTParty.post(@urlstring_to_post.to_str,
-    :body => { :title => 'Test Notification from Quench2o',
+    :body => { :title => 'Message from QuencH2O',
                :website_id => '13950',
-               :body => 'You are on pace to finish',
+               :body => 'Time to check out your water consumption on Quench2o',
                :ttl => '6',
                :access_token => @auth['access_token']
              }.to_json,
