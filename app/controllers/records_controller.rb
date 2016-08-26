@@ -6,7 +6,7 @@ class RecordsController < ApplicationController
     user = User.find_by :email => email
     latest_total_today = user.totals.last #need to ask about User.last
 
-    if  latest_total_today == nil || latest_total_today.created_at < Time.zone.now.beginning_of_day #if it is a new day start a new counter for total water consumption
+    if  latest_total_today == nil || latest_total_today.created_at < DateTime.now.beginning_of_day #if it is a new day start a new counter for total water consumption
       newTotal = Total.new
       newTotal.total_consumed = 0
       newTotal.date = Time.zone.today

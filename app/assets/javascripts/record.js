@@ -6,7 +6,7 @@ $(document).ready(function() {
     var totalconsumed = 0;
     var target = 2000;
     var total_consumed_today;
-    var water_height = 650;
+    var water_height = 372;
 
     var getTodayData = function(){
 
@@ -64,7 +64,7 @@ $(document).ready(function() {
                 consumedAxis[i]={
                     y: consumedAxis[i],
                     marker: {
-                        symbol: 'url(https://www.highcharts.com/samples/graphics/sun.png)'
+                        symbol: 'url(/assets/quench2o_logo.png)'
                     }
               };
             }
@@ -82,18 +82,19 @@ $(document).ready(function() {
                         text: "Katrina's Water Intake"
                     },
                     subtitle: {
-                        text: 'Week of XXX'
+                        text: 'Last 7 days'
                     },
                     xAxis: {
                         categories: dateAxis
+
                     },
                     yAxis: {
                         title: {
-                            text: 'ml'
+                            text: 'mL'
                         },
                         labels: {
                             formatter: function() {
-                                return this.value + 'ml';
+                                return this.value + 'mL';
                             }
                         }
                     },
@@ -105,13 +106,14 @@ $(document).ready(function() {
                         spline: {
                             marker: {
                                 radius: 4,
-                                lineColor: '#666666',
+                                lineColor: '#ddd',
                                 lineWidth: 1
                             }
                         }
                     },
                     series: [{
                         name: 'Target',
+                        color: '#ccc',
                         marker: {
                             symbol: 'square'
                         },
@@ -129,6 +131,7 @@ $(document).ready(function() {
             });
         });
     };
+
     setInterval(function() {
     getTodayData();
   }, 60000);

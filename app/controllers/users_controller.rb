@@ -27,6 +27,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find params[:id]
+    @latest_total_today = (@user.totals.last.total_consumed * 1000) .to_i
   end
 
   def destroy

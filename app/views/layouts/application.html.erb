@@ -1,20 +1,52 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>WaterTracker</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag "https://www.google.com/jsapi" %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <!-- <script charset="UTF-8" src="//cdn.sendpulse.com/js/push/35cb040d21242af965d5e113e345e02f_0.js" async></script> -->
-  <script charset="UTF-8" src="//cdn.sendpulse.com/js/push/fe0e0c89689e22e85204261b33081f7a_1.js" async></script>
+    <head>
+        <title>WaterTracker</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+        <%= javascript_include_tag "https://www.google.com/jsapi" %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+        <!-- <script charset="UTF-8" src="//cdn.sendpulse.com/js/push/35cb040d21242af965d5e113e345e02f_0.js" async></script> -->
+        <script charset="UTF-8" src="//cdn.sendpulse.com/js/push/fe0e0c89689e22e85204261b33081f7a_1.js" async></script>
 
+        <%= csrf_meta_tags %>
 
-  <%= csrf_meta_tags %>
+    </head>
+    <body>
+        <div class="container">
+            <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand brand_font" href="/">quencH2O</a>
+                      </div>
+                        <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav navbar-right">
+                                <% if @current_user.present? %>
 
-</head>
-<body>
+                                <li><%= link_to "Edit Profile", edit_user_path(@current_user) %></li>
+                                <li><%= link_to "Logout #{ @current_user.name }", login_path, :method => :delete %></li>
+                            <% else %>
+                                <li><%= link_to 'Sign up', new_user_path %></li>
+                                <% end %>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                </nav>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
 
-<%= yield %>
+        <%= yield %>
 
-</body>
+    </body>
 </html>

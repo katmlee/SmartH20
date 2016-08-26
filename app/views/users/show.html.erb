@@ -1,57 +1,40 @@
-<h1><%= @user.name %>'s Dashboard</h1>
-<a href="#" class="sp_notify_prompt">Activate notifications</a>
-
-<ul>
-
-  <div class="waterBottle">
-    <div class="water">
+<div class="wrapper"></div>
+<div class="row col-md-8 col-md-offset-2 welcomeMsg">
+    <h1><%= @user.name %>'s Dashboard</h1>
+    <h3>Daily Goal: 2000mL</h3>
+    <h3>Water consumed today: <%= @latest_total_today %>mL</h3>
+</div>
+<div class="container">
+<div class="row">
+  <div class="col-xs-8 col-md-4 col-md-offset-1">
+        <div class="cap">
+            <div class="cap-top"></div>
+            <div class="cap-seal"></div>
+        </div>
+        <div class="bottle">
+            <div class="water-empty"></div>
+        </div>
+    </li>
+    <div class="waterBottle">
+      <div class="surprise"></div>
+        <div class="water"></div>
     </div>
   </div>
+  <div class="col-xs-8 col-md-5 col-md-offset-1 leaderBoard">
+      <h1>Leader Board</h1>
+      <ul>
+          <li>1. Luke: 1700ml</li>
+          <li>2. Joel: 1600ml</li>
+          <li>3. Gary: 1520ml</li>
+          <li>4. Tripti: 1482ml</li>
+          <li>5. Katrina: 1460ml</li>
+      </ul>
+  </div>
+</div>
+</div>
 
-<!-- <li class="water-bottle">
-    <div class="cap">
-        <div class="cap-top">
-        </div>
-        <div class="cap-seal">
-        </div>
-    </div>
-   <div class="bottle">
-        <div class="water-empty"> </div>
-    </div>
-</li>
-      <li class="water-bottle">
-    <div class="cap">
-        <div class="cap-top">
-        </div>
-        <div class="cap-seal">
-        </div>
-    </div>
-   <div class="bottle">
-        <div class="water-low"> </div>
-    </div>
-</li>
-<li class="water-bottle">
-    <div class="cap">
-        <div class="cap-top">
-        </div>
-        <div class="cap-seal">
-        </div>
-    </div>
-   <div class="bottle">
-        <div class="water-medium"> </div>
-    </div>
-</li>
-
-    <li class="water-bottle">
-    <div class="cap">
-        <div class="cap-top">
-        </div>
-        <div class="cap-seal">
-        </div>
-    </div>
-   <div class="bottle">
-        <div class="water-full"> </div>
-    </div>
-</li>
-</ul> -->
+</div>
+<div class="row col-md-10 col-md-offset-1 chart">
 <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+</div>
+</div>

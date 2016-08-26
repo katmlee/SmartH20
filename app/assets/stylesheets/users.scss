@@ -1,86 +1,116 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'https://fonts.googleapis.com/css?family=Quicksand:300,400';
 @import "compass/css3/animation";
 @import "compass/css3/transform";
 
+body {
+    font-family: 'Quicksand', sans-serif;
+}
+.navbar-default {
+    background-color: rgba(255, 0, 0, 0);
+    border-color: rgba(255, 0, 0, 0);
+}
+
+.wrapper{
+  margin: 100px auto auto auto;
+  max-width: 690px;
+}
+// .login_form{
+//   margin: 0 auto;
+// }
+.login_row{
+  margin-top: 100px;
+  color: black;
+  background-color: rgba(255, 255, 255, .7);
+  text-align: center;
+  padding-bottom: 30px;
+  z-index: 0;
+
+}
+.welcomeMsg{
+  text-align: center;
+  margin-bottom: 50px;
+  font-weight: bold;
+}
+
+
+.chart{
+  margin-top: 60px;
+}
+
 .waterBottle{
-  background: gray;
-  width: 400px;
-  height: 700px;
-  border-radius:28px 28px 10px 10px;
+  margin: 0 auto;
+  text-align: center;
+  background: #ddd;
+  width: 250px;
+  height: 450px;
+  border-radius:83px 83px 20px 20px;
   position: relative;
 }
 
 .water{
-  background: blue;
-  height: 650px;
+  margin: 0 auto;
+  text-align: center;
+  background: lightblue;
+  height: 374px;
   position: absolute;
   bottom: 0;
   left: 0;
   z-index: 100;
+  border-radius:0px 0px 20px 20px;
   width: 100%;
 }
-// $waveWidth:998px;
-//
-// @include keyframes(waves){
-//   0%{
-//     left:0;
-//   }
-//   100%{
-//     left:$waveWidth * -1;
-//   }
-// }
-//
-//
-// body{
-//   background:#e6e6e5;
-//   overflow:hidden;
-// }
-//
-//
-// .waves{
-//   position: fixed;
-//   bottom: 0;
-//   left: 0;
-//   width: $waveWidth * 5;
-//   z-index:0;
-//   opacity:0.75;
-//   .wave{
-//     position:absolute;
-//     width:100%;
-//     height:300px;
-//     background-image:url('https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2012/02/Screen-shot-2012-02-12-at-11.56.54-PM.png');
-//     background-repeat:repeat-x;
-//     &.bottom-wave{
-//       @include animation(waves 17s infinite linear);
-//       bottom:-90px;
-//     }
-//     &.middle-wave{
-//       @include animation(waves 22s infinite linear);
-//       bottom:100px;
-//       margin-left:$waveWidth * -0.3;
-//     }
-//     &.top-wave{
-//       @include animation(waves 27s infinite linear);
-//       bottom:300px;
-//       margin-left:$waveWidth * -0.6;
-//     }
-//   }
-// }
 
-// body { margin:10% 10%; }
-// li.water-bottle { float:left;margin-right:15px;}
-// ul { list-style-type:inline;
-// text-decoration: none;}
-// .bottle { background: #ddd; width:100px;border-radius:30px 30px 6px 6px; height:200px; padding:6px;box-shadow: 3px 3px 3px #efefef;margin-bottom:4px;}
-// .bottle:hover { background: #eee;box-shadow: 2px  2px 2px #efefef;}
-// .cap { background: #ddd; margin:0 25px;width:60px;border-radius:8px 8px 10px  12px; height:35px;border-top:1px solid #ddd; border-bottom:2px dotted #efefef;}
-// .cap-top { background:#ededed; height:6px; border-radius:10px 10px 0 0; }
-// .cap-seal { margin-top:20px;background:#ccc; height:6px; border-radius: 0 0 10px 10px; }
-//
-//
-// .water-full { background: lightblue ;width:100px;margin-top:10px;height:190px; z-index:1;border-radius:28px 28px 10px 10px;}
-// .water-medium { background: lightblue; width:100px;height:120px;margin-top:80px; z-index:1;border-radius:28px 28px 10px 10px;}
-// .water-low { background: lightblue ;width:100px;height:75px; margin-top:125px;z-index:1;border-radius:28px 28px 10px 10px;}
-// .water-empty { background: lightblue ;width:100px;height:15px; margin-top:185px;z-index:1;border-radius:28px 28px 10px 10px;}
+.dash{
+  padding-top: 25px;
+}
+
+.surprise{
+  margin: 0 auto;
+  text-align: center;
+  background-image: url('https://ga-core.s3.amazonaws.com/production/uploads/instructor/image/1051/thumb_joel.jpg');
+  background-position: cover;
+  height: 350px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 50;
+  border-radius:0px 0px 20px 20px;
+  width: 100%;
+}
+.cap {
+    text-align: center;
+    background: #ddd;
+    margin: 0 auto;
+    width: 125px;
+    border-radius: 8px 8px 10px 12px;
+    height: 35px;
+    border-top: 1px solid #ddd;
+    border-bottom: 2px dotted #efefef;
+}
+.cap-top {
+    background: #ededed;
+    height: 6px;
+    border-radius: 10px 10px 0 0;
+}
+.cap-seal {
+    margin-top: 20px;
+    background: #ccc;
+    height: 6px;
+    border-radius: 0 0 10px 10px;
+}
+.leaderBoard{
+  height: 487px;
+  background-color: #ddd;
+  border-radius: 10px;
+  text-align: left;
+}
+
+ul li{
+  margin: 0 auto;
+  list-style: none;
+  font-size: 20px;
+  padding: 15px;
+}
