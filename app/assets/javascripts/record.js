@@ -134,6 +134,6 @@ $(document).ready(function() {
 
     setInterval(function() {
     getTodayData();
-  }, 60000);
+  }, 10000);
     getHistoricalData();
 });
