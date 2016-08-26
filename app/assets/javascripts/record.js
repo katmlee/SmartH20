@@ -8,40 +8,21 @@ $(document).ready(function() {
     var total_consumed_today;
     var water_height = 372;
 
-    var getTodayData = function(){
+    var getTodayData = function() {
 
-      var url ='/todayData';
+        var url = '/todayData';
 
-      $.ajax({
-        url: url,
-      }).done(function(result) {
-        console.log(result.total[0].total_consumed*1000);
-        total_consumed_today = result.total[0].total_consumed*1000;
-        waterBottleClassPercentage = 1.0 - (total_consumed_today/target);
-        // waterBottleClassPercentage= 0.8;
-        water_height= water_height * waterBottleClassPercentage;
-        $('.water').css('height', water_height+'px');
-      //   console.log(result.outcome);
-      //   timestamps = result.change;
-      //   outcomeArray = result.outcome;
-      //
-      //     // # if i+1 > i .split arrays at index of i+1
-      // for (var i = 0; i < outcomeArray.length; i++) {
-      //   if(outcomeArray[i] < outcomeArray[i+1]){ //refill detected
-      //     sets.push(outcomeArray.slice(setStart, i+1));
-      //     setStart= i+1;
-      //   } else if (i === outcomeArray.length -1){
-      //     sets.push(outcomeArray.slice(setStart));
-      //   }
-      // }
-      // console.log(sets);// # for each array do array.first -array.last. Sum those differences for the total water consumed.
-      // for (var j = 0; j < sets.length; j++) {
-      //     totalconsumed += (_.first(sets[j]) - _.last(sets[j]));
-      // }
-      // console.log(totalconsumed);
-      // // Total water consumed divided by Goal = in Sass how much of the div container to show.
+        $.ajax({
+            url: url,
+        }).done(function(result) {
+            console.log(result.total[0].total_consumed * 1000);
+            total_consumed_today = result.total[0].total_consumed * 1000;
+            waterBottleClassPercentage = 1.0 - (total_consumed_today / target);
+            // waterBottleClassPercentage= 0.8;
+            water_height = water_height * waterBottleClassPercentage;
+            $('.water').css('height', water_height + 'px');
 
-    });
+        });
     };
 
     var getHistoricalData = function() {
@@ -58,17 +39,17 @@ $(document).ready(function() {
             var dateAxis = [];
             var consumedAxis = [];
             for (var i = 0; i < data.totalArray.length; i++) {
-              dateAxis.push(data.totalArray[i].date);
-              consumedAxis.push(data.totalArray[i].total_consumed);
-              if (consumedAxis[i] == target){
-                consumedAxis[i]={
-                    y: consumedAxis[i],
-                    marker: {
-                        symbol: 'url(http://installatron.com/images/new/icon_star.png)'
-                    }
-              };
+                dateAxis.push(data.totalArray[i].date);
+                consumedAxis.push(data.totalArray[i].total_consumed);
+                if (consumedAxis[i] == target) {
+                    consumedAxis[i] = {
+                        y: consumedAxis[i],
+                        marker: {
+                            symbol: 'url(http://installatron.com/images/new/icon_star.png)'
+                        }
+                    };
+                }
             }
-          }
             console.log(dateAxis.pop(), consumedAxis.pop());
 
 
@@ -133,7 +114,7 @@ $(document).ready(function() {
     };
 
     setInterval(function() {
-    getTodayData();
-  }, 10000);
+        getTodayData();
+    }, 60000);
     getHistoricalData();
 });
