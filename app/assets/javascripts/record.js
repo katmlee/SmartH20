@@ -64,7 +64,7 @@ $(document).ready(function() {
                 consumedAxis[i]={
                     y: consumedAxis[i],
                     marker: {
-                        symbol: 'url(/assets/quench2o_logo.png)'
+                        symbol: 'url(quench2o_logo.png)'
                     }
               };
             }
