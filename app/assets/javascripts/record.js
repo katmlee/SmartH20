@@ -64,7 +64,7 @@ $(document).ready(function() {
                 consumedAxis[i]={
                     y: consumedAxis[i],
                     marker: {
-                        symbol: 'url(quench2o_logo.png)'
+                        symbol: 'url(http://installatron.com/images/new/icon_star.png)'
                     }
               };
             }
