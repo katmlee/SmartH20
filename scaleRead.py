@@ -3,7 +3,8 @@ import urllib2
 import time
 
 EMAIL = 'katrinamarielee@gmail.com'
-HOST = 'https://quench2o.herokuapp.com/submit_reading'
+# HOST = 'https://quench2o.herokuapp.com/submit_reading'
+HOST = 'http://localhost:3000/submit_reading'
 
 STABLE_TIME = 1.0
 
@@ -26,6 +27,7 @@ while True:
     if time.time() - last_change > STABLE_TIME and line != last_sent_reading and last_reading > 0.005:
         print 'DIFF! (submit)'
         querystring = '?email=' + EMAIL + '&reading=' + str(line)
+        # print 'url:' + HOST + querystring
         urllib2.urlopen(HOST + querystring).read()
         last_sent_reading = line
 

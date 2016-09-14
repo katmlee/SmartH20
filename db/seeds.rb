@@ -19,13 +19,13 @@ r13 = Record.create(:outcome => 1700, :target => 2000, :created_at => DateTime.s
 r14 = Record.create(:outcome => 1750, :target => 2000, :created_at => DateTime.strptime("2016-08-21 10:45", "%Y-%m-%d %H:%M"))
 r15 = Record.create(:outcome => 1800, :target => 2000, :created_at => DateTime.strptime("2016-08-22 10:45", "%Y-%m-%d %H:%M"))
 
-t1 = Total.create(:total_consumed => 1800, :date => DateTime.strptime("2016-08-19", "%Y-%m-%d"), :created_at => DateTime.strptime("2016-08-19 10:45", "%Y-%m-%d %H:%M"))
-t2 = Total.create(:total_consumed => 1700, :date => DateTime.strptime("2016-08-20", "%Y-%m-%d"), :created_at => DateTime.strptime("2016-08-20 10:45", "%Y-%m-%d %H:%M"))
-t3 = Total.create(:total_consumed => 1470, :date => DateTime.strptime("2016-08-21", "%Y-%m-%d"), :created_at => DateTime.strptime("2016-08-21 10:45", "%Y-%m-%d %H:%M"))
-t4 = Total.create(:total_consumed => 1900, :date => DateTime.strptime("2016-08-22", "%Y-%m-%d"), :created_at => DateTime.strptime("2016-08-22 10:45", "%Y-%m-%d %H:%M"))
-t5 = Total.create(:total_consumed => 2000, :date => DateTime.strptime("2016-08-23", "%Y-%m-%d"), :created_at => DateTime.strptime("2016-08-23 10:45", "%Y-%m-%d %H:%M"))
-t6 = Total.create(:total_consumed => 1930, :date => DateTime.strptime("2016-08-24", "%Y-%m-%d"), :created_at => DateTime.strptime("2016-08-24 10:45", "%Y-%m-%d %H:%M"))
-t7 = Total.create(:total_consumed => 1800, :date => DateTime.strptime("2016-08-25", "%Y-%m-%d"), :created_at => DateTime.strptime("2016-08-25 10:45", "%Y-%m-%d %H:%M"))
+t1 = Total.create(:total_consumed => 1800, :date => DateTime.strptime("2016-09-07", "%Y-%m-%d"), :created_at => DateTime.strptime("2016-09-07 10:45", "%Y-%m-%d %H:%M"))
+t2 = Total.create(:total_consumed => 1700, :date => DateTime.strptime("2016-09-08", "%Y-%m-%d"), :created_at => DateTime.strptime("2016-09-08 10:45", "%Y-%m-%d %H:%M"))
+t3 = Total.create(:total_consumed => 1470, :date => DateTime.strptime("2016-09-09", "%Y-%m-%d"), :created_at => DateTime.strptime("2016-09-09 10:45", "%Y-%m-%d %H:%M"))
+t4 = Total.create(:total_consumed => 1900, :date => DateTime.strptime("2016-09-10", "%Y-%m-%d"), :created_at => DateTime.strptime("2016-09-10 10:45", "%Y-%m-%d %H:%M"))
+t5 = Total.create(:total_consumed => 2000, :date => DateTime.strptime("2016-09-11", "%Y-%m-%d"), :created_at => DateTime.strptime("2016-09-11 10:45", "%Y-%m-%d %H:%M"))
+t6 = Total.create(:total_consumed => 1930, :date => DateTime.strptime("2016-09-12", "%Y-%m-%d"), :created_at => DateTime.strptime("2016-09-12 10:45", "%Y-%m-%d %H:%M"))
+t7 = Total.create(:total_consumed => 1800, :date => DateTime.strptime("2016-09-13", "%Y-%m-%d"), :created_at => DateTime.strptime("2016-09-13 10:45", "%Y-%m-%d %H:%M"))
 
 u1.totals << t1 << t2 << t3 << t4 << t5 << t6 << t7
 
